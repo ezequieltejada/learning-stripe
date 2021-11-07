@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "learning-stripe": {
+      "hosting": {
+        "learning-stripe": [
+          "learning-stripe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "learning-stripe"
+  }
+}

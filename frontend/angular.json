@@ -107,6 +107,16 @@
           "options": {
             "browserTarget": "learning-stripe:build"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "learning-stripe:build:production",
+            "firebaseProject": "learning-stripe",
+            "firebaseHostingSite": "learning-stripe"
+          }
         }
       }
     }
