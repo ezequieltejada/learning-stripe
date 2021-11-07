@@ -1,6 +1,14 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>Home Component</span>
-</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="sideNavOpened">
+        <mat-toolbar></mat-toolbar>
+        <app-menu [menuItems]="menuItems"></app-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button mat-icon-button (click)="sideNavOpened = !sideNavOpened">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Home Component</span>
+        </mat-toolbar>
+    </mat-sidenav-content>
+</mat-sidenav-container>
