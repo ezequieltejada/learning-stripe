@@ -11,6 +11,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideFunctions,getFunctions } from '@angular/fire/functions';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
     provideFunctions(() => getFunctions()),
-    providePerformance(() => getPerformance())
+    providePerformance(() => getPerformance()),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
