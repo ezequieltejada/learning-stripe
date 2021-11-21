@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  app:
+    image: mcr.microsoft.com/vscode/devcontainers/typescript-node:0-14
+    ports:
+      - 4200:4200
+    volumes:
+      - ..:/workspace
+    working_dir: /workspace/frontend
+    command: bash -c "yarn global add firebase-tools@latest @angular/cli@13.0.1 && tail -F /dev/null"
+  stripecli:
+    image: stripe/stripe-cli
+    env_file:
+      - ./.env
+    command: listen --api-key ${STRIPE_SECRET_KEY} --device-name ${STRIPE_DEVICE_NAME}
